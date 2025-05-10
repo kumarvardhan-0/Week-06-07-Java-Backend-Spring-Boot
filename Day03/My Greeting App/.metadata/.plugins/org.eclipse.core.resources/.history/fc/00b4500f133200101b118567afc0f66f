@@ -1,0 +1,5 @@
+package com.spring.greeting.controller;
+
+public class GreetingController {
+
+}

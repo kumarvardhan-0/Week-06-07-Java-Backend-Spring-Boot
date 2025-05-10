@@ -1,0 +1,23 @@
+package com.spring.core;
+
+import com.spring.core.beans.Employee;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.context.ApplicationContext;
+
+@SpringBootApplication
+public class SpringCoreDemoApplication {
+
+    private static final Logger logger = LoggerFactory.getLogger(SpringCoreDemoApplication.class);
+
+    public static void main(String[] args) {
+        ApplicationContext context = SpringApplication.run(SpringCoreDemoApplication.class, args);
+
+        Employee emp = context.getBean(Employee.class);
+        emp.showDetails();
+
+        logger.info("Application started successfully with Dependency Injection.");
+    }
+}

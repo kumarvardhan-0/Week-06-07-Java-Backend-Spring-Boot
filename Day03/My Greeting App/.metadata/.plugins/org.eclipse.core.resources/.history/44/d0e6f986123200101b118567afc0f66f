@@ -1,0 +1,5 @@
+package com.spring.greeting.model;
+
+public class Greeting {
+
+}

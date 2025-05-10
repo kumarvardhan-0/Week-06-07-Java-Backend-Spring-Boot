@@ -1,0 +1,5 @@
+package com.sprig.app.controller;
+
+public class HelloRestController {
+
+}

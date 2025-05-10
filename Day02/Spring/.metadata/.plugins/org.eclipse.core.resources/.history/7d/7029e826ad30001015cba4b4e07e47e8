@@ -1,0 +1,39 @@
+package com.spring.core;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.spring.core.beans.Department;
+import com.spring.core.beans.Employee;
+import com.spring.core.beans.Logging;
+
+@SpringBootApplication  // Marks this class as the main Spring Boot application class
+public class SpringCoreDemoApplication implements CommandLineRunner {
+
+    @Autowired  // Injects the EmployeeBean into this class
+    private Employee employeeBean;
+
+    @Autowired  // Injects the DepartmentBean into this class
+    private Department departmentBean;
+
+    @Autowired
+    private Logging loggerService;
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringCoreDemoApplication.class, args);  // Starts the Spring Boot application
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        // Using the injected beans to call their methods
+        employeeBean.printEmployeeDetails();
+        departmentBean.printDepartmentDetails();
+
+        // Logging the details using LoggerService
+        loggerService.logEmployeeDetails(employeeBean);
+        loggerService.logDepartmentDetails(departmentBean);
+    }
+}

@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\user\Documents\Java Capgemini\Week 06 & 07 - Java Backend - Spring Boot\01 - Tomcat Servlet\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3296410367.index
+1474317460.index
+3366154616.index
+2149781231.index
+4008163440.index
+1426702094.index
+3858166615.index
